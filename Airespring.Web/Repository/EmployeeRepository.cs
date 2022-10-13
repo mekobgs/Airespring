@@ -41,7 +41,7 @@ namespace Airespring.Web.Repository
 
         public async Task<IEnumerable<Employee>> GetEmployees(string sortOrder)
         {
-            var query = "SELECT LastName, FirstName, Phone, Zip, Convert(varchar, HiredDate,1) as HiredDate FROM EMPLOYEE";
+            var query = "SELECT Id, LastName, FirstName, Phone, Zip, Convert(varchar, HiredDate,1) as HiredDate FROM EMPLOYEE";
             switch (sortOrder)
             {
                 case "Date":
@@ -60,7 +60,7 @@ namespace Airespring.Web.Repository
 
         public async Task<IEnumerable<Employee>> GetEmployees(string sortOrder, string searchString)
         {
-            var query = "SELECT LastName, FirstName, Phone, Zip, Convert(varchar, HiredDate,1) as HiredDate FROM EMPLOYEE WHERE LastName like CONCAT('%',@searchString,'%')  or Phone like CONCAT('%',@searchString,'%')";
+            var query = "SELECT Id, LastName, FirstName, Phone, Zip, Convert(varchar, HiredDate,1) as HiredDate FROM EMPLOYEE WHERE LastName like CONCAT('%',@searchString,'%')  or Phone like CONCAT('%',@searchString,'%')";
 
             switch (sortOrder)
             {
