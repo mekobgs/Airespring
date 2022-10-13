@@ -6,9 +6,9 @@ To run this project please:
 
 - Run this script on your local database: 
  ``` 
- Create Database Airespring;
+ Create Database AirespringDb;
  
- Use Airespring;
+ Use AirespringDb;
  
  Create table Employee(
  Id int IDENTITY(1,1) PRIMARY KEY,
